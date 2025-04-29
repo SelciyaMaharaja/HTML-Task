@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        padding: 20px;
+        }
+        .form-container {
+        max-width: 700px;
+        margin:auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2{
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        label{
+            display:block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        <input [type="text"],
+        <input [type="email"],
+        textare {
+        width: 100%;
+        padding: 10px;  
+        margin-top: 5px;
+        border: 1px solid #ccc; 
+        box-sizing: border-box;
+        }
+        .star-rating{
+            color:orange;
+            font-size: 24px;
+        }
+        .rating-table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .rating-table th, .rating-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .rating-table th {
+            background-color: #f4f4f4;
+        }
+        .rating-table td:first-child{
+            text-align: left;
+            background-color: #fff;
+        }
+        textarea{
+            height: 80px;
+            resize: vertical
+            margin-top:10px;
+        }
+        .submit-btn {
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius:5px; 
+            font-size: 16px;
+            cursor: pointer;        
+        }
+        .submit-btn:hover {
+            background: #555;
+        }    
+ </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Survey Form</h2>
+        <form action="submit_survey.php" method="POST">
+            <div class="form-group">
+                <label for="firstName">Name *</label>
+                <input type="text" id="firstName" placeholder="First" required>
+                <input type="text" placeholder="Last" style="margin-top: 10px;" required>
+          
+                <label for="email">Email *</label>
+                <input type="email" id="email" required>
+          
+                <label>Your Experience *</label>
+                <div class="star-rating">★ ★ ★ ★ ★</div>
+                <p>Overall, how would you rate your experience with us?</p>
+          
+                <label>How satisfied are you with *</label>
+                <table class="rating-table" border="1">
+                    <tr>
+                        <th>Criteria</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                    </tr>
+                    <tr>
+                        <td>Quality of Service</td>
+                        <td><input type="radio" name="quality" value="1"></td>
+                        <td><input type="radio" name="quality" value="2"></td>
+                        <td><input type="radio" name="quality" value="3"></td>
+                        <td><input type="radio" name="quality" value="4"></td>
+                        <td><input type="radio" name="quality" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Customer Support</td>
+                        <td><input type="radio" name="support" value="1"></td>
+                        <td><input type="radio" name="support" value="2"></td>
+                        <td><input type="radio" name="support" value="3"></td>
+                        <td><input type="radio" name="support" value="4"></td>
+                        <td><input type="radio" name="support" value="5"></td>
+                    </tr>  
+                    <tr>
+                        <td>Company Overall</td>
+                        <td><input type="radio" name="overall" required></td>
+                        <td><input type="radio" name="overall"></td>
+                        <td><input type="radio" name="overall"></td>
+                        <td><input type="radio" name="overall"></td>
+                        <td><input type="radio" name="overall"></td>
+                      </tr>
+                    </table>
+              
+                    <label>How likely are you to *</label>
+                    <table class="rating-table" border="1">
+                      <tr>
+                        <th></th>
+                        <th>Very Unlikely</th>
+                        <th>Unlikely</th>
+                        <th>Neutral</th>
+                        <th>Likely</th>
+                        <th>Very Likely</th>
+                      </tr>
+                      <tr>
+                        <td>Buy from us again</td>
+                        <td><input type="radio" name="buy" required></td>
+                        <td><input type="radio" name="buy"></td>
+                        <td><input type="radio" name="buy"></td>
+                        <td><input type="radio" name="buy"></td>
+                        <td><input type="radio" name="buy"></td>
+                      </tr>
+                      <tr>
+                        <td>Recommend our product to others</td>
+                        <td><input type="radio" name="recommend-product" required></td>
+                        <td><input type="radio" name="recommend-product"></td>
+                        <td><input type="radio" name="recommend-product"></td>
+                        <td><input type="radio" name="recommend-product"></td>
+                        <td><input type="radio" name="recommend-product"></td>
+                      </tr>
+                      <tr>
+                        <td>Recommend our company to others</td>
+                        <td><input type="radio" name="recommend-company" required></td>
+                        <td><input type="radio" name="recommend-company"></td>
+                        <td><input type="radio" name="recommend-company"></td>
+                        <td><input type="radio" name="recommend-company"></td>
+                        <td><input type="radio" name="recommend-company"></td>
+                      </tr>
+                    </table>
+              
+                    <label for="comments">Additional comments or suggestions</label>
+                    <textarea id="comments" placeholder="Write here..."></textarea>
+              
+                    <button class="submit-btn" type="submit">Submit</button>
+                  </form>
+                </div>
+              
+              </body>
+              </html>
+               
